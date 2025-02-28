@@ -1,23 +1,26 @@
-# docker-pterodactyl-panel
+# Pterodactyl Panel Installation  
 
-Easily set up pterodactyl on Docker, adhering to the *one service per container* mantra.
+Welcome to the **Pterodactyl Panel Installation Repository**! This repository is designed to provide essential resources and files for setting up the **Pterodactyl Panel** on a Debian-based VPS. Whether you're looking to host game servers efficiently or streamline your server management, this repository aims to simplify the installation process.  
 
-(Well, mostly. Cron and php-fpm run on the same container, but cron doesn't count, right?)
+## 📌 About This Repository  
+This repository contains all the necessary scripts and configurations required for installing and setting up **Pterodactyl Panel** seamlessly. By using these resources, you can quickly deploy and manage your game servers with ease.  
 
-I think it should be compatible with Docker Swarm, but I'm not able to test this myself yet.
+## 🔗 Want a Complete Installation Guide?  
+If you're looking for a **detailed step-by-step installation guide**, you can find it on my official website. I have created a **comprehensive guide** that walks you through the entire installation process in an easy-to-follow manner.  
 
-## Getting started
+👉 **[Click Here for the Full Installation Guide](https://divyanshu.webdevkin.com)**  
 
-1. Copy `docker-compose.yml` to somewhere on your computer.
-2. Edit `docker-compose.yml` to choose a secure username and password for your database. You'll need to use the same credentials for both mariadb's MYSQL_USER/MYSQL_PASSWORD and PHP-FPM's DB_USERNAME/DB_PASSWORD environment variables.
-3. Run `docker-compose up -d`.
-4. Find the name of the php container using `docker ps`. It should be something like `docker-pterodactyl-panel_php-fpm_1`.
-5. Run `docker exec -it docker-pterodactyl-panel_php-fpm_1 php artisan p:user:make` and follow the prompts to set up your first user.
+## 🌐 Check Out My Portfolio  
+I'm a **professional Minecraft server developer and VPS specialist**, and I specialize in **high-performance server setups** and **cutting-edge futuristic web designs**.  
 
-## Using your own MySQL/MariaDB server
+Want to see my work? Visit my portfolio to explore my skills, projects, and futuristic designs:  
 
-By default this stack includes its own MariaDB server, but with a few modifications you can have it use an existing database server instead. You will need to make several modifications to docker-compose.yml.
+👉 **[Visit My Portfolio](https://divyanshu.webdevkin.com)**  
 
-1. Edit docker-compose.yml to remove the database server block.
-2. Edit docker-compose.yml to remove database from the depends_on section of the php server block.
-3. Edit docker-compose.yml to modify php-fpm's DB_HOST and DB_PORT environment variables.
+## 📝 Credits  
+This installation guide is based on the work of **Joshua Walsh**.  
+Email: [josh@ymindustries.com](mailto:josh@ymindustries.com)  
+
+---  
+
+Feel free to explore, use, and modify this repository as needed. If you have any questions, reach out to me through my website!

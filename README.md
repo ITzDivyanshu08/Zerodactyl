@@ -9,4 +9,9 @@ This repository is dedicated to making the installation of Pterodactyl easier by
 This installation guide is based on the work of **Joshua Walsh**.  
 Email: [josh@ymindustries.com](mailto:josh@ymindustries.com)  
 
+## 🧾 Want to get installation files too?
+
+**Click on this link to see my portfolio with installation files also.👇**
+https://divyanshu.webdevkin.com
+
 ---

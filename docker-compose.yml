@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  db:
+    image: mariadb:latest
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: pterodactyl_db
+      MYSQL_USER: panel_user
+      MYSQL_PASSWORD: securepanelpass
+      MYSQL_RANDOM_ROOT_PASSWORD: "true"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  redis_cache:
+    image: redis:alpine
+    restart: unless-stopped
+
+  app_php:
+    image: divyanshu08/pterodactyl08:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+    volumes:
+      - app_data:/var/www/panel/
+      - storage_data:/var/www/panel/storage/
+      - public_data:/var/www/panel/public/
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: pterodactyl_db
+      DB_USERNAME: panel_user
+      DB_PASSWORD: securepanelpass
+
+  web_server:
+    image: joshuawalsh/nginx-for-php-fpm
+    restart: unless-stopped
+    depends_on:
+      - app_php
+    ports:
+      - "5080:80"
+    volumes:
+      - public_data:/var/www/panel/
+
+volumes:
+  db_data:
+  storage_data:
+  public_data:
+  app_data:

@@ -1,4 +1,4 @@
-⭐ Pterodactyl Panel - Dockerized ⭐
+# ⭐ Pterodactyl Panel - Dockerized ⭐
 
 Effortlessly deploy Pterodactyl Panel in a fully containerized Docker environment with a structured and optimized setup.
 
@@ -9,7 +9,7 @@ This setup might be compatible with Docker Swarm, but it hasn’t been fully tes
 
 ---
 
-🚀 Quick Setup Guide
+# 🚀 Quick Setup Guide
 
 1️⃣ Download the Configuration
 
@@ -52,7 +52,7 @@ Follow the prompts to configure your first administrator account for the panel.
 
 ---
 
-⚡ Using an External MySQL/MariaDB Server
+# ⚡ Using an External MySQL/MariaDB Server
 
 If you want to connect to an external MySQL/MariaDB database instead of using the built-in MariaDB container, follow these steps:
 
@@ -71,5 +71,5 @@ If you want to connect to an external MySQL/MariaDB database instead of using th
 
 ---
 
-✅ Done! Now your Pterodactyl Panel is fully functional in a Dockerized environment! 🚀
+# ✅ Done! Now your Pterodactyl Panel is fully functional in a Dockerized environment! 🚀
 

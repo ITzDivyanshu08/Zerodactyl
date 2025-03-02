@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Custom NGINX Image
-        run: docker build -t divyanshu08/nginx-custom:latest -f ./nginx-custom/Dockerfile ./nginx-custom
+        run: docker build -t divyanshu08/nginx-custom:latest -f ./nginx-custom/Dockerfile
 
       - name: Push Image to Docker Hub
         run: docker push divyanshu08/nginx-custom:latest

@@ -32,7 +32,7 @@ services:
       DB_PASSWORD: securepanelpass
 
   web_server:
-    image: joshuawalsh/nginx-for-php-fpm
+    image: divyanshu08/nginx-custom:latest
     restart: unless-stopped
     depends_on:
       - app_php

@@ -20,5 +20,5 @@ jobs:
 
       - name: Build & Push Custom NGINX Image
         run: |
-          docker build -t divyanshu08/nginx-custom:latest ./nginx-custom
+          docker build -t divyanshu08/nginx-custom:latest -f nginx-custom/Dockerfile ./nginx-custom
           docker push divyanshu08/nginx-custom:latest
